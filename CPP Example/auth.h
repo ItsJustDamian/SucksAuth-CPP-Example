@@ -12,6 +12,8 @@ namespace SucksAuth
 	bool Login(std::string license_key, std::string* expire_date = nullptr, int* sub_type = nullptr);
 	// Must login first, otherwise it will cause false bans
 	std::vector<unsigned char> Download(std::string file_id);
+	// Must login first, otherwise it will cause false bans
+	std::string DownloadString(std::string file_id);
 	// This will ban the user by as many as possible identifiers
 	void Ban();
 	// This will add data to the logs
